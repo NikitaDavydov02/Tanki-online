@@ -87,13 +87,14 @@ public class CameraScript : MonoBehaviour {
         Managers.UserInterfaceManager.ChangeZoom(true);
         zoom = true;
         cam.fieldOfView = 20;
-        //Vector3 rot = transform.localEulerAngles;
-        //float y = transform.localEulerAngles.y;
-        //transform.localEulerAngles = new Vector3(0, y, 0);
-        //transform.Translate(new Vector3(0, -3.25f, 8.31f));
-        //Debug.Log(transform.localEulerAngles);
-        //Managers.UserInterfaceManager.ShowPricel();
-        //Debug.Log("RotY: " + _rotY);
+
+        Vector3 rot = transform.localEulerAngles;
+        float y = transform.localEulerAngles.y;
+        transform.localEulerAngles = new Vector3(0, -y, 0);
+        transform.Translate(new Vector3(0, -3.25f, 8.31f));
+        Debug.Log(transform.localEulerAngles);
+        Managers.UserInterfaceManager.ShowPricel();
+        Debug.Log("RotY: " + _rotY);
     }
 
     public void InArtaZoom()
@@ -208,6 +209,7 @@ public class CameraScript : MonoBehaviour {
                 Quaternion rotation = Quaternion.Euler(0, _rotY, 0);
                 transform.position = target.position - (rotation * _zoomOffset);
                 transform.LookAt(target);
+                transform.Rotate(0, 180f, 0);
                 //transform.Rotate(-5.35f, 180, 0);
 
                 //Vector3 rot = transform.localEulerAngles;

@@ -16,11 +16,11 @@ public class InventoryManager : MonoBehaviour, IGameManager {
 
     // Use this for initialization
     void Start () {
-        staticInventory.Add(BoxType.Kit, 0);
-        staticInventory.Add(BoxType.DoubleArmor, 0);
-        staticInventory.Add(BoxType.DoubleBlow, 0);
-        staticInventory.Add(BoxType.Acceleration, 0);
-        staticInventory.Add(BoxType.Mine, 0);
+        staticInventory.Add(BoxType.Kit, 100);
+        staticInventory.Add(BoxType.DoubleArmor, 100);
+        staticInventory.Add(BoxType.DoubleBlow, 100);
+        staticInventory.Add(BoxType.Acceleration, 100);
+        staticInventory.Add(BoxType.Mine, 100);
     }
 	
 	// Update is called once per frame

@@ -18,7 +18,7 @@ public class MineScript : MonoBehaviour {
         if(Physics.Raycast(ray,out hit))
         {
             Debug.Log(hit.collider.gameObject);
-            ReactiveTarget target = hit.collider.gameObject.transform.parent.GetComponent<ReactiveTarget>();
+            ReactiveTarget target = hit.collider.gameObject.transform.root.GetComponent<ReactiveTarget>();
             if (target != null && hit.distance <= 1)
             {
                 Debug.Log("Get!");

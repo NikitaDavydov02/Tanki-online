@@ -9,7 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(InventoryManager))]
 [RequireComponent(typeof(GameManager))]
 [RequireComponent(typeof(EnemyManager))]
-[RequireComponent(typeof(GarageUIManager))]
+//[RequireComponent(typeof(GarageUIManager))]
 [RequireComponent(typeof(TankManager))]
 public class Managers : MonoBehaviour {
     public static AudioManager Audio { get; private set; }
