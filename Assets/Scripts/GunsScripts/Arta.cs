@@ -87,8 +87,8 @@ public class Arta : BaseGun {
         GameObject check;
         check = Instantiate(checkBulletPrefab) as GameObject;
         check.transform.position = transform.position;
-        CheckBullet checkBullet = check.GetComponent<CheckBullet>();
-        checkBullet.forward = transform.up;
+        // CheckBullet checkBullet = check.GetComponent<CheckBullet>();
+        //checkBullet.forward = transform.up;
         check.transform.eulerAngles = transform.parent.transform.eulerAngles;
 
         if (Managers.UserInterfaceManager.targetPricelPoint!= Managers.UserInterfaceManager.currentPricelPoint && Managers.UserInterfaceManager.inArtaZoom)

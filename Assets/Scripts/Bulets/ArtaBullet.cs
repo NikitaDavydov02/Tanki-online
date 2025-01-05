@@ -71,11 +71,11 @@ public class ArtaBullet : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //Debug.Log("AAA!"+transform.position);
-        if (other.gameObject.GetComponent<Player>() || other.gameObject.GetComponent<Arta>()|| other.gameObject.GetComponent<CheckBullet>())
+        /*if (other.gameObject.GetComponent<Player>() || other.gameObject.GetComponent<Arta>()|| other.gameObject.GetComponent<CheckBullet>())
         {
             Debug.Log(other.gameObject);
             return;
-        }
+        }*/
         dim = Instantiate(dimPrefab) as GameObject;
         dim.transform.position = transform.position;
         ReactiveTarget target = null;
